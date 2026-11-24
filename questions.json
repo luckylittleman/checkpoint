@@ -1,0 +1,1658 @@
+[
+ {
+  "id": "only1",
+  "level": 5,
+  "title": "only1",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Write a program that displays a 1 character and nothing else.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [],
+    "out": "1"
+   },
+   {
+    "args": [
+     "a",
+     "b"
+    ],
+    "out": "1"
+   }
+  ]
+ },
+ {
+  "id": "onlyz",
+  "level": 5,
+  "title": "onlyz",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Write a program that displays a z character and nothing else.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [],
+    "out": "z"
+   }
+  ]
+ },
+ {
+  "id": "countalpha",
+  "level": 10,
+  "title": "CountAlpha",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return the number of alphabetic characters (a-z, A-Z) in s.",
+  "starter": "package main\n\nfunc CountAlpha(a string) int {\n\treturn 0\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(CountAlpha(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "Hello world"
+    ],
+    "out": "10"
+   },
+   {
+    "args": [
+     "H e l l o"
+    ],
+    "out": "5"
+   },
+   {
+    "args": [
+     "H1e2l3l4o"
+    ],
+    "out": "5"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": "0"
+   }
+  ]
+ },
+ {
+  "id": "checknumber",
+  "level": 10,
+  "title": "CheckNumber",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return true if the string contains any digit.",
+  "starter": "package main\n\nfunc CheckNumber(a string) bool {\n\treturn false\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(CheckNumber(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "Hello"
+    ],
+    "out": "false"
+   },
+   {
+    "args": [
+     "Hello1"
+    ],
+    "out": "true"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": "false"
+   }
+  ]
+ },
+ {
+  "id": "rectperimeter",
+  "level": 10,
+  "title": "RectPerimeter",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return the perimeter of a w x h rectangle, or -1 if either is negative.",
+  "starter": "package main\n\nfunc RectPerimeter(a int, b int) int {\n\treturn 0\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(RectPerimeter(atoi(os.Args[1]),atoi(os.Args[2])))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "10",
+     "2"
+    ],
+    "out": "24"
+   },
+   {
+    "args": [
+     "434343",
+     "898989"
+    ],
+    "out": "2666664"
+   },
+   {
+    "args": [
+     "10",
+     "-2"
+    ],
+    "out": "-1"
+   },
+   {
+    "args": [
+     "0",
+     "0"
+    ],
+    "out": "0"
+   }
+  ]
+ },
+ {
+  "id": "printif",
+  "level": 10,
+  "title": "PrintIf",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return \"G\\n\" if len(str) >= 3 or str is empty, otherwise \"Invalid Input\\n\".",
+  "starter": "package main\n\nfunc PrintIf(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(PrintIf(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "abcdefz"
+    ],
+    "out": "G"
+   },
+   {
+    "args": [
+     "abc"
+    ],
+    "out": "G"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": "G"
+   },
+   {
+    "args": [
+     "14"
+    ],
+    "out": "Invalid Input"
+   }
+  ]
+ },
+ {
+  "id": "hashcode",
+  "level": 20,
+  "title": "HashCode",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "For each char: (ASCII + len(dec)) % 127; if the result is unprintable (below 32, or 127) add 33. Return the new string.",
+  "starter": "package main\n\nfunc HashCode(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(HashCode(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "A"
+    ],
+    "out": "B"
+   },
+   {
+    "args": [
+     "AB"
+    ],
+    "out": "CD"
+   },
+   {
+    "args": [
+     "BAC"
+    ],
+    "out": "EDF"
+   },
+   {
+    "args": [
+     "Hello World"
+    ],
+    "out": "Spwwz+bz}wo"
+   },
+   {
+    "args": [
+     "~"
+    ],
+    "out": "!"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "firstword",
+  "level": 20,
+  "title": "FirstWord",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return the first word of s followed by \"\\n\". Words are delimited by spaces.",
+  "starter": "package main\n\nfunc FirstWord(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(FirstWord(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "hello there"
+    ],
+    "out": "hello"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "hello ......... bye"
+    ],
+    "out": "hello"
+   },
+   {
+    "args": [
+     "  lead"
+    ],
+    "out": "lead"
+   }
+  ]
+ },
+ {
+  "id": "lastword",
+  "level": 20,
+  "title": "LastWord",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return the last word of s followed by \"\\n\".",
+  "starter": "package main\n\nfunc LastWord(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(LastWord(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "this ... is sparta, then again, maybe not"
+    ],
+    "out": "not"
+   },
+   {
+    "args": [
+     " lorem,ipsum "
+    ],
+    "out": "lorem,ipsum"
+   },
+   {
+    "args": [
+     " "
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "one"
+    ],
+    "out": "one"
+   }
+  ]
+ },
+ {
+  "id": "gcd",
+  "level": 20,
+  "title": "Gcd",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return the greatest common divisor of two uints; 0 if either is 0.",
+  "starter": "package main\n\nfunc Gcd(a uint, b uint) uint {\n\treturn 0\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(Gcd(uint(atoi(os.Args[1])),uint(atoi(os.Args[2]))))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "42",
+     "10"
+    ],
+    "out": "2"
+   },
+   {
+    "args": [
+     "42",
+     "12"
+    ],
+    "out": "6"
+   },
+   {
+    "args": [
+     "14",
+     "77"
+    ],
+    "out": "7"
+   },
+   {
+    "args": [
+     "17",
+     "3"
+    ],
+    "out": "1"
+   },
+   {
+    "args": [
+     "0",
+     "5"
+    ],
+    "out": "0"
+   }
+  ]
+ },
+ {
+  "id": "digitlen",
+  "level": 20,
+  "title": "DigitLen",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return how many times n can be divided by base until 0. base must be 2..36 else -1. Negative n: flip the sign.",
+  "starter": "package main\n\nfunc DigitLen(a int, b int) int {\n\treturn 0\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(DigitLen(atoi(os.Args[1]),atoi(os.Args[2])))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "100",
+     "10"
+    ],
+    "out": "3"
+   },
+   {
+    "args": [
+     "100",
+     "2"
+    ],
+    "out": "7"
+   },
+   {
+    "args": [
+     "-100",
+     "16"
+    ],
+    "out": "2"
+   },
+   {
+    "args": [
+     "100",
+     "-1"
+    ],
+    "out": "-1"
+   },
+   {
+    "args": [
+     "0",
+     "10"
+    ],
+    "out": "0"
+   }
+  ]
+ },
+ {
+  "id": "itoa",
+  "level": 35,
+  "title": "Itoa",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Re-implement strconv.Itoa (handle the minus sign). No imports.",
+  "starter": "package main\n\nfunc Itoa(a int) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(Itoa(atoi(os.Args[1])))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "12345"
+    ],
+    "out": "12345"
+   },
+   {
+    "args": [
+     "0"
+    ],
+    "out": "0"
+   },
+   {
+    "args": [
+     "-1234"
+    ],
+    "out": "-1234"
+   },
+   {
+    "args": [
+     "987654321"
+    ],
+    "out": "987654321"
+   }
+  ]
+ },
+ {
+  "id": "fromto",
+  "level": 35,
+  "title": "FromTo",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return numbers from..to as two-digit values separated by \", \", ending in \"\\n\". If either is <0 or >99 return \"Invalid\\n\".",
+  "starter": "package main\n\nfunc FromTo(a int, b int) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(FromTo(atoi(os.Args[1]),atoi(os.Args[2])))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "1",
+     "10"
+    ],
+    "out": "01, 02, 03, 04, 05, 06, 07, 08, 09, 10"
+   },
+   {
+    "args": [
+     "10",
+     "1"
+    ],
+    "out": "10, 09, 08, 07, 06, 05, 04, 03, 02, 01"
+   },
+   {
+    "args": [
+     "10",
+     "10"
+    ],
+    "out": "10"
+   },
+   {
+    "args": [
+     "100",
+     "10"
+    ],
+    "out": "Invalid"
+   }
+  ]
+ },
+ {
+  "id": "thirdtimeisacharm",
+  "level": 35,
+  "title": "ThirdTimeIsACharm",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return every third character of str followed by \"\\n\" (just \"\\n\" if there is none).",
+  "starter": "package main\n\nfunc ThirdTimeIsACharm(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(ThirdTimeIsACharm(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "123456789"
+    ],
+    "out": "369"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "a b c d e f"
+    ],
+    "out": "b e"
+   },
+   {
+    "args": [
+     "12"
+    ],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "weareunique",
+  "level": 35,
+  "title": "WeAreUnique",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Count distinct characters that are in only one of the two strings. 0 if none; -1 if both empty.",
+  "starter": "package main\n\nfunc WeAreUnique(a string, b string) int {\n\treturn 0\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(WeAreUnique(os.Args[1],os.Args[2]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "foo",
+     "boo"
+    ],
+    "out": "2"
+   },
+   {
+    "args": [
+     "",
+     ""
+    ],
+    "out": "-1"
+   },
+   {
+    "args": [
+     "abc",
+     "def"
+    ],
+    "out": "6"
+   },
+   {
+    "args": [
+     "abc",
+     "abc"
+    ],
+    "out": "0"
+   },
+   {
+    "args": [
+     "aab",
+     ""
+    ],
+    "out": "2"
+   }
+  ]
+ },
+ {
+  "id": "zipstring",
+  "level": 35,
+  "title": "ZipString",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Run-length encode: each group of identical neighbours becomes count+char.",
+  "starter": "package main\n\nfunc ZipString(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(ZipString(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "YouuungFellllas"
+    ],
+    "out": "1Y1o3u1n1g1F1e4l1a1s"
+   },
+   {
+    "args": [
+     "Helloo Therre!"
+    ],
+    "out": "1H1e2l2o1 1T1h1e2r1e1!"
+   },
+   {
+    "args": [
+     "aaaa"
+    ],
+    "out": "4a"
+   },
+   {
+    "args": [
+     "abcdefghijkk"
+    ],
+    "out": "1a1b1c1d1e1f1g1h1i1j2k"
+   }
+  ]
+ },
+ {
+  "id": "findprevprime",
+  "level": 35,
+  "title": "FindPrevPrime",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return the first prime <= nb, or 0 if none.",
+  "starter": "package main\n\nfunc FindPrevPrime(a int) int {\n\treturn 0\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(FindPrevPrime(atoi(os.Args[1])))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "5"
+    ],
+    "out": "5"
+   },
+   {
+    "args": [
+     "4"
+    ],
+    "out": "3"
+   },
+   {
+    "args": [
+     "1"
+    ],
+    "out": "0"
+   },
+   {
+    "args": [
+     "0"
+    ],
+    "out": "0"
+   },
+   {
+    "args": [
+     "20"
+    ],
+    "out": "19"
+   }
+  ]
+ },
+ {
+  "id": "fprime",
+  "level": 50,
+  "title": "fprime",
+  "kind": "program",
+  "allowed_imports": [
+   "os",
+   "github.com/01-edu/z01"
+  ],
+  "statement": "Print the prime factors of a positive int, ascending, separated by '*', then a newline. Wrong arg count, invalid input, 0 or 1: print nothing. Only os.Args and printing runes (z01).",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "225225"
+    ],
+    "out": "3*3*5*5*7*11*13"
+   },
+   {
+    "args": [
+     "8333325"
+    ],
+    "out": "3*3*5*5*7*11*13*37"
+   },
+   {
+    "args": [
+     "9539"
+    ],
+    "out": "9539"
+   },
+   {
+    "args": [
+     "804577"
+    ],
+    "out": "804577"
+   },
+   {
+    "args": [
+     "42"
+    ],
+    "out": "2*3*7"
+   },
+   {
+    "args": [
+     "a"
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "0"
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "1"
+    ],
+    "out": ""
+   },
+   {
+    "args": [],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "hiddenp",
+  "level": 50,
+  "title": "hiddenp",
+  "kind": "program",
+  "allowed_imports": [
+   "os",
+   "github.com/01-edu/z01"
+  ],
+  "statement": "Take s1 and s2. Print 1 if s1 is hidden in s2 (its chars appear in order, not necessarily adjacent), else 0, then a newline. Empty s1 is hidden. Wrong arg count: print nothing.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "fgex.;",
+     "tyf34gdgf;'ektufjhgdgex.;.;rtjynur6"
+    ],
+    "out": "1"
+   },
+   {
+    "args": [
+     "abc",
+     "2altrb53c.sse"
+    ],
+    "out": "1"
+   },
+   {
+    "args": [
+     "abc",
+     "btarc"
+    ],
+    "out": "0"
+   },
+   {
+    "args": [
+     "DD",
+     "DABC"
+    ],
+    "out": "0"
+   },
+   {
+    "args": [
+     "",
+     "abc"
+    ],
+    "out": "1"
+   },
+   {
+    "args": [],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "inter",
+  "level": 50,
+  "title": "inter",
+  "kind": "program",
+  "allowed_imports": [
+   "os",
+   "github.com/01-edu/z01"
+  ],
+  "statement": "Print, without doubles, the chars that appear in both strings, in the order of the first, then a newline. Wrong arg count: print nothing.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "padinton",
+     "paqefwtdjetyiytjneytjoeyjnejeyj"
+    ],
+    "out": "padinto"
+   },
+   {
+    "args": [
+     "ddf6vewg64f",
+     "twthgdwthdwfteewhrtag6h4ffdhsd"
+    ],
+    "out": "df6ewg4"
+   },
+   {
+    "args": [
+     "abc",
+     "xyz"
+    ],
+    "out": ""
+   },
+   {
+    "args": [],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "union",
+  "level": 50,
+  "title": "union",
+  "kind": "program",
+  "allowed_imports": [
+   "os",
+   "github.com/01-edu/z01"
+  ],
+  "statement": "Print, without doubles, the chars that appear in either string, in command-line order, then a newline. Wrong arg count: print just a newline.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "zpadinton",
+     "paqefwtdjetyiytjneytjoeyjnejeyj"
+    ],
+    "out": "zpadintoqefwjy"
+   },
+   {
+    "args": [
+     "ddf6vewg64f",
+     "gtwthgdwthdwfteewhrtag6h4ffdhsd"
+    ],
+    "out": "df6vewg4thras"
+   },
+   {
+    "args": [
+     "rien",
+     "cette phrase ne cache rien"
+    ],
+    "out": "rienct phas"
+   },
+   {
+    "args": [
+     "rien"
+    ],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "wdmatch",
+  "level": 50,
+  "title": "wdmatch",
+  "kind": "program",
+  "allowed_imports": [
+   "os",
+   "github.com/01-edu/z01"
+  ],
+  "statement": "If the first string can be written using chars of the second, in order, print the first string and a newline; otherwise print nothing. Wrong arg count: nothing.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "123",
+     "123"
+    ],
+    "out": "123"
+   },
+   {
+    "args": [
+     "faya",
+     "fgvvfdxcacpolhyghbreda"
+    ],
+    "out": "faya"
+   },
+   {
+    "args": [
+     "faya",
+     "fgvvfdxcacpolhyghbred"
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "error",
+     "rrerrrfiiljdfxjyuifrrvcoojh"
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "quarante deux",
+     "qfqfsudf arzgsayns tsregfdgs sjytdekuoixq "
+    ],
+    "out": "quarante deux"
+   }
+  ]
+ },
+ {
+  "id": "fifthandskip",
+  "level": 65,
+  "title": "FifthAndSkip",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Separate every five characters with a space and remove the sixth. Spaces inside the input are ignored. Fewer than 5 chars: \"Invalid Input\\n\". Empty: \"\\n\".",
+  "starter": "package main\n\nfunc FifthAndSkip(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(FifthAndSkip(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "abcdefghijklmnopqrstuwxyz"
+    ],
+    "out": "abcde ghijk mnopq stuwx z"
+   },
+   {
+    "args": [
+     "This is a short sentence"
+    ],
+    "out": "Thisi ashor sente ce"
+   },
+   {
+    "args": [
+     "1234"
+    ],
+    "out": "Invalid Input"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "notdecimal",
+  "level": 65,
+  "title": "NotDecimal",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Take a float string and return it as an int string without the decimal point (multiply by 10^n). No decimal point or only a zero after it: return the number. Empty or not a number: return it unchanged.",
+  "starter": "package main\n\nfunc NotDecimal(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(NotDecimal(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "0.1"
+    ],
+    "out": "1"
+   },
+   {
+    "args": [
+     "174.2"
+    ],
+    "out": "1742"
+   },
+   {
+    "args": [
+     "0.1255"
+    ],
+    "out": "1255"
+   },
+   {
+    "args": [
+     "1.20525856"
+    ],
+    "out": "120525856"
+   },
+   {
+    "args": [
+     "-0.0f00d00"
+    ],
+    "out": "-0.0f00d00"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "-19.525856"
+    ],
+    "out": "-19525856"
+   },
+   {
+    "args": [
+     "1952"
+    ],
+    "out": "1952"
+   }
+  ]
+ },
+ {
+  "id": "revconcatalternate",
+  "level": 65,
+  "title": "RevConcatAlternate",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Takes two []int, returns a new slice of alternated values in reverse order. The longer slice's extra elements come first (reversed); if lengths are equal start with the first slice.",
+  "starter": "package main\n\nfunc RevConcatAlternate(slice1, slice2 []int) []int {\n\treturn nil\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc parse(s string) []int {\n\tr := []int{}\n\tif s == \"\" {\n\t\treturn r\n\t}\n\tfor _, p := range strings.Split(s, \",\") {\n\t\tn, _ := strconv.Atoi(p)\n\t\tr = append(r, n)\n\t}\n\treturn r\n}\n\nfunc main() {\n\tfmt.Println(RevConcatAlternate(parse(os.Args[1]), parse(os.Args[2])))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "1,2,3",
+     "4,5,6"
+    ],
+    "out": "[3 6 2 5 1 4]"
+   },
+   {
+    "args": [
+     "1,2,3",
+     "4,5,6,7,8,9"
+    ],
+    "out": "[9 8 7 3 6 2 5 1 4]"
+   },
+   {
+    "args": [
+     "1,2,3,9,8",
+     "4,5"
+    ],
+    "out": "[8 9 3 2 5 1 4]"
+   },
+   {
+    "args": [
+     "1,2,3",
+     ""
+    ],
+    "out": "[3 2 1]"
+   }
+  ],
+  "main_code": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tfmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6}))\n\tfmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{4, 5, 6, 7, 8, 9}))\n\tfmt.Println(RevConcatAlternate([]int{1, 2, 3, 9, 8}, []int{4, 5}))\n\tfmt.Println(RevConcatAlternate([]int{1, 2, 3}, []int{}))\n}\n",
+  "run": "$ go run .\n[3 6 2 5 1 4]\n[9 8 7 3 6 2 5 1 4]\n[8 9 3 2 5 1 4]\n[3 2 1]"
+ },
+ {
+  "id": "slice",
+  "level": 65,
+  "title": "Slice",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Slice(a []string, nbrs ...int) []string: cut a from the first int to the second (or to the end if only one). Integers can be negative.",
+  "starter": "package main\n\nfunc Slice(a []string, nbrs ...int) []string {\n\treturn nil\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc main() {\n\tnbrs := []int{}\n\tfor _, s := range os.Args[2:] {\n\t\tn, _ := strconv.Atoi(s)\n\t\tnbrs = append(nbrs, n)\n\t}\n\tfmt.Printf(\"%#v\\n\", Slice(strings.Split(os.Args[1], \",\"), nbrs...))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "coding,algorithm,ascii,package,golang",
+     "1"
+    ],
+    "out": "[]string{\"algorithm\", \"ascii\", \"package\", \"golang\"}"
+   },
+   {
+    "args": [
+     "coding,algorithm,ascii,package,golang",
+     "2",
+     "4"
+    ],
+    "out": "[]string{\"ascii\", \"package\"}"
+   },
+   {
+    "args": [
+     "coding,algorithm,ascii,package,golang",
+     "-3"
+    ],
+    "out": "[]string{\"ascii\", \"package\", \"golang\"}"
+   },
+   {
+    "args": [
+     "coding,algorithm,ascii,package,golang",
+     "-2",
+     "-1"
+    ],
+    "out": "[]string{\"package\"}"
+   },
+   {
+    "args": [
+     "coding,algorithm,ascii,package,golang",
+     "2",
+     "0"
+    ],
+    "out": "[]string(nil)"
+   }
+  ],
+  "main_code": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\ta := []string{\"coding\", \"algorithm\", \"ascii\", \"package\", \"golang\"}\n\tfmt.Printf(\"%#v\\n\", Slice(a, 1))\n\tfmt.Printf(\"%#v\\n\", Slice(a, 2, 4))\n\tfmt.Printf(\"%#v\\n\", Slice(a, -3))\n\tfmt.Printf(\"%#v\\n\", Slice(a, -2, -1))\n\tfmt.Printf(\"%#v\\n\", Slice(a, 2, 0))\n}\n",
+  "run": "$ go run .\n[]string{\"algorithm\", \"ascii\", \"package\", \"golang\"}\n[]string{\"ascii\", \"package\"}\n[]string{\"ascii\", \"package\", \"golang\"}\n[]string{\"package\"}\n[]string(nil)"
+ },
+ {
+  "id": "findpairs",
+  "level": 75,
+  "title": "findpairs",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Take a quoted int array like \"[1, 2, 3, 4, 5]\" and a target. Print \"Pairs with sum T: [[i j] ...]\" (indices). Messages: \"No pairs found.\", \"Invalid target sum.\", \"Invalid number: x\", \"Invalid input.\"",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "[1, 2, 3, 4, 5]",
+     "6"
+    ],
+    "out": "Pairs with sum 6: [[0 4] [1 3]]"
+   },
+   {
+    "args": [
+     "[-1, 2, -3, 4, -5]",
+     "1"
+    ],
+    "out": "Pairs with sum 1: [[0 1] [2 3]]"
+   },
+   {
+    "args": [
+     "[1, 2, 3, 4, 5]",
+     "10"
+    ],
+    "out": "No pairs found."
+   },
+   {
+    "args": [
+     "[-1, -2, -3, -4, -5]",
+     "-5"
+    ],
+    "out": "Pairs with sum -5: [[0 3] [1 2]]"
+   },
+   {
+    "args": [
+     "[1, 2, 3, 4, 20, -4, 5]",
+     "2 5"
+    ],
+    "out": "Invalid target sum."
+   },
+   {
+    "args": [
+     "[1, 2, 3, 4, 20, p, 5]",
+     "5"
+    ],
+    "out": "Invalid number: p"
+   },
+   {
+    "args": [
+     "[1, 2, 3, 4",
+     "5"
+    ],
+    "out": "Invalid input."
+   },
+   {
+    "args": [
+     "1, 2, 3, 4",
+     "5"
+    ],
+    "out": "Invalid input."
+   }
+  ]
+ },
+ {
+  "id": "revwstr",
+  "level": 75,
+  "title": "revwstr",
+  "kind": "program",
+  "allowed_imports": [
+   "os",
+   "github.com/01-edu/z01"
+  ],
+  "statement": "Print the words of the argument in reverse order, then a newline. Words are alphanumeric, separated by exactly one space. Wrong arg count: print nothing.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "the time of contempt precedes that of indifference"
+    ],
+    "out": "indifference of that precedes contempt of time the"
+   },
+   {
+    "args": [
+     "abcdefghijklm"
+    ],
+    "out": "abcdefghijklm"
+   },
+   {
+    "args": [
+     "he stared at the mountain"
+    ],
+    "out": "mountain the at stared he"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": ""
+   },
+   {
+    "args": [],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "rostring",
+  "level": 75,
+  "title": "rostring",
+  "kind": "program",
+  "allowed_imports": [
+   "os",
+   "github.com/01-edu/z01"
+  ],
+  "statement": "Rotate the string one word to the left (first word becomes last), words separated by one space. Wrong arg count: print a newline.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "abc   "
+    ],
+    "out": "abc"
+   },
+   {
+    "args": [
+     "Let there     be light"
+    ],
+    "out": "there be light Let"
+   },
+   {
+    "args": [
+     "     AkjhZ zLKIJz , 23y"
+    ],
+    "out": "zLKIJz , 23y AkjhZ"
+   },
+   {
+    "args": [],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "wordflip",
+  "level": 75,
+  "title": "WordFlip",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Return the words in reverse order followed by \"\\n\". Collapse multiple spaces and trim. Empty string: \"Invalid Output\".",
+  "starter": "package main\n\nfunc WordFlip(a string) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(WordFlip(os.Args[1]))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "First second last"
+    ],
+    "out": "last second First"
+   },
+   {
+    "args": [
+     ""
+    ],
+    "out": "Invalid Output"
+   },
+   {
+    "args": [
+     "     "
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     " hello  all  of  you! "
+    ],
+    "out": "you! of all hello"
+   }
+  ]
+ },
+ {
+  "id": "itoabase",
+  "level": 85,
+  "title": "ItoaBase",
+  "kind": "func",
+  "allowed_imports": [],
+  "statement": "Convert value to a string in base 2..16 using digits 0-9 then uppercase A-F. Negative values get a leading '-'.",
+  "starter": "package main\n\nfunc ItoaBase(a int, b int) string {\n\treturn \"\"\n}\n",
+  "harness": "package main\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n)\n\nfunc atoi(s string) int { n, _ := strconv.Atoi(s); return n }\n\nfunc main() {\n\tfmt.Print(ItoaBase(atoi(os.Args[1]),atoi(os.Args[2])))\n}\n",
+  "tests": [
+   {
+    "args": [
+     "255",
+     "16"
+    ],
+    "out": "FF"
+   },
+   {
+    "args": [
+     "-10",
+     "2"
+    ],
+    "out": "-1010"
+   },
+   {
+    "args": [
+     "0",
+     "2"
+    ],
+    "out": "0"
+   },
+   {
+    "args": [
+     "100",
+     "10"
+    ],
+    "out": "100"
+   },
+   {
+    "args": [
+     "31",
+     "4"
+    ],
+    "out": "133"
+   },
+   {
+    "args": [
+     "-255",
+     "16"
+    ],
+    "out": "-FF"
+   }
+  ]
+ },
+ {
+  "id": "options",
+  "level": 85,
+  "title": "options",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Args starting with '-' are options a-z; print them as 4 bytes (32 bits, bit0=a ... bit25=z) in groups of 8. No args or -h first in an arg prints \"options: abcdefghijklmnopqrstuvwxyz\". Any invalid option: \"Invalid Option\".",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [],
+    "out": "options: abcdefghijklmnopqrstuvwxyz"
+   },
+   {
+    "args": [
+     "-abc",
+     "-ijk"
+    ],
+    "out": "00000000 00000000 00000111 00000111"
+   },
+   {
+    "args": [
+     "-z"
+    ],
+    "out": "00000010 00000000 00000000 00000000"
+   },
+   {
+    "args": [
+     "-abc",
+     "-hijk"
+    ],
+    "out": "options: abcdefghijklmnopqrstuvwxyz"
+   },
+   {
+    "args": [
+     "-h"
+    ],
+    "out": "options: abcdefghijklmnopqrstuvwxyz"
+   },
+   {
+    "args": [
+     "-zh"
+    ],
+    "out": "00000010 00000000 00000000 10000000"
+   },
+   {
+    "args": [
+     "-z",
+     "-h"
+    ],
+    "out": "options: abcdefghijklmnopqrstuvwxyz"
+   },
+   {
+    "args": [
+     "-hhhhhh"
+    ],
+    "out": "options: abcdefghijklmnopqrstuvwxyz"
+   },
+   {
+    "args": [
+     "-eeeeee"
+    ],
+    "out": "00000000 00000000 00000000 00010000"
+   },
+   {
+    "args": [
+     "-%"
+    ],
+    "out": "Invalid Option"
+   },
+   {
+    "args": [
+     "-"
+    ],
+    "out": "Invalid Option"
+   }
+  ]
+ },
+ {
+  "id": "piglatin",
+  "level": 85,
+  "title": "piglatin",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Print the Pig Latin of the argument: word starting with a vowel (aeiou, any case) gets \"ay\"; otherwise move leading consonants to the end then add \"ay\". No vowels: \"No vowels\". Wrong arg count: print nothing.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "pig"
+    ],
+    "out": "igpay"
+   },
+   {
+    "args": [
+     "Is"
+    ],
+    "out": "Isay"
+   },
+   {
+    "args": [
+     "crunch"
+    ],
+    "out": "unchcray"
+   },
+   {
+    "args": [
+     "crnch"
+    ],
+    "out": "No vowels"
+   },
+   {
+    "args": [
+     "something",
+     "else"
+    ],
+    "out": ""
+   },
+   {
+    "args": [],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "romannumbers",
+  "level": 85,
+  "title": "romannumbers",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Convert the number argument (1-3999) to a roman numeral. Print its calculation, e.g. C+X+X+I+I+I (subtractive parts as (M-C)), then the numeral on the next line. Invalid number, 0 or 4000+: \"ERROR: cannot convert to roman digit\".",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "hello"
+    ],
+    "out": "ERROR: cannot convert to roman digit"
+   },
+   {
+    "args": [
+     "123"
+    ],
+    "out": "C+X+X+I+I+I\nCXXIII"
+   },
+   {
+    "args": [
+     "999"
+    ],
+    "out": "(M-C)+(C-X)+(X-I)\nCMXCIX"
+   },
+   {
+    "args": [
+     "3999"
+    ],
+    "out": "M+M+M+(M-C)+(C-X)+(X-I)\nMMMCMXCIX"
+   },
+   {
+    "args": [
+     "4000"
+    ],
+    "out": "ERROR: cannot convert to roman digit"
+   },
+   {
+    "args": [
+     "0"
+    ],
+    "out": "ERROR: cannot convert to roman digit"
+   }
+  ]
+ },
+ {
+  "id": "brackets",
+  "level": 95,
+  "title": "brackets",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "For each argument print OK if its (), [], {} are correctly bracketed, otherwise Error. Other chars are ignored; no brackets is OK. No arguments: print nothing.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "(johndoe)"
+    ],
+    "out": "OK"
+   },
+   {
+    "args": [
+     "([)]"
+    ],
+    "out": "Error"
+   },
+   {
+    "args": [
+     "",
+     "{[(0 + 0)(1 + 1)](3*(-1)){()}}"
+    ],
+    "out": "OK\nOK"
+   },
+   {
+    "args": [
+     "(("
+    ],
+    "out": "Error"
+   },
+   {
+    "args": [
+     "}{"
+    ],
+    "out": "Error"
+   },
+   {
+    "args": [],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "rpncalc",
+  "level": 95,
+  "title": "rpncalc",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Evaluate the RPN expression in the single argument (+ - * / %) and print the result. Extra spaces are fine. Invalid expression or arg count != 1: print Error.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "1 2 * 3 * 4 +"
+    ],
+    "out": "10"
+   },
+   {
+    "args": [
+     "1 2 3 4 +"
+    ],
+    "out": "Error"
+   },
+   {
+    "args": [],
+    "out": "Error"
+   },
+   {
+    "args": [
+     "     1      3 * 2 -"
+    ],
+    "out": "1"
+   },
+   {
+    "args": [
+     "     1      3 * ksd 2 -"
+    ],
+    "out": "Error"
+   },
+   {
+    "args": [
+     "5 1 2 + 4 * + 3 -"
+    ],
+    "out": "14"
+   },
+   {
+    "args": [
+     "8 2 /"
+    ],
+    "out": "4"
+   },
+   {
+    "args": [
+     "7 3 %"
+    ],
+    "out": "1"
+   }
+  ]
+ },
+ {
+  "id": "brainfuck",
+  "level": 100,
+  "title": "brainfuck",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Write a Brainfuck interpreter. Source is the first argument; 2048-byte array of zeros, pointer at the first byte. > < + - . [ ] ; any other char is a comment. No argument: print nothing.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+    ],
+    "out": "Hello World!"
+   },
+   {
+    "args": [
+     "+++++++++[>++++++++<-]>.[-]<+++++++++++++[>++++++++<-]>+.[-]<+[>++++++++<-]>++.[-]<"
+    ],
+    "out": "Hi"
+   },
+   {
+    "args": [
+     "++++++++++++[>++++++++<-]>+.[-]<++++++++++++[>++++++++<-]>++.[-]<++++++++++++[>++++++++<-]>+++.[-]<+[>++++++++<-]>++.[-]<"
+    ],
+    "out": "abc"
+   },
+   {
+    "args": [],
+    "out": ""
+   }
+  ]
+ },
+ {
+  "id": "grouping",
+  "level": 100,
+  "title": "grouping",
+  "kind": "program",
+  "allowed_imports": null,
+  "statement": "Replicate regex brackets: args are a pattern like \"(a)\" or \"(e|n)\" and a text. Print each match's containing word (punctuation stripped) as \"N: word\", in order, one line per match. Wrong arg count, invalid pattern, empty text or no match: print nothing.",
+  "starter": "package main\n\nfunc main() {\n}\n",
+  "tests": [
+   {
+    "args": [
+     "(a)",
+     "I'm heavy, jumpsuit is on steady, Lighter when I'm lower, higher when I'm heavy"
+    ],
+    "out": "1: heavy\n2: steady\n3: heavy"
+   },
+   {
+    "args": [
+     "(e|n)",
+     "I currently have 4 windows opened up… and I don’t know why."
+    ],
+    "out": "1: currently\n2: currently\n3: have\n4: windows\n5: opened\n6: opened\n7: and\n8: don’t\n9: know"
+   },
+   {
+    "args": [
+     "(hi)",
+     "He swore he just saw his sushi move."
+    ],
+    "out": "1: his\n2: sushi"
+   },
+   {
+    "args": [
+     "(s)",
+     ""
+    ],
+    "out": ""
+   },
+   {
+    "args": [
+     "i",
+     "Something in the air"
+    ],
+    "out": ""
+   }
+  ]
+ }
+]
